@@ -1,79 +1,75 @@
-Retina Result Fetcher
+# Retina Result Fetcher
 
 <div align="center">
 
-.github/logo/retina_logo.svg
+![Retina Logo](.github/logo/retina_logo.svg)
 
-A comprehensive result management system for Retina Medical Coaching Centre, Bangladesh
+*A comprehensive result management system for Retina Medical Coaching Centre, Bangladesh*
 
-https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=termux&logoColor=white
-https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white
-https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge
+[![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=termux&logoColor=white)](https://termux.com/)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 </div>
 
-📋 Overview
+## 📋 Overview
 
-Retina Result Fetcher is a powerful command-line tool designed specifically for students of Retina Medical Coaching Centre in Bangladesh. This system allows students to easily fetch, compare, and analyze their exam results directly from the official Retina result portal using their Termux terminal on Android devices.
+Retina Result Fetcher is a powerful command-line tool designed specifically for students of **Retina Medical Coaching Centre** in Bangladesh. This system allows students to easily fetch, compare, and analyze their exam results directly from the official Retina result portal using their Termux terminal on Android devices.
 
-✨ Features
+## ✨ Features
 
-📊 Result Management
+### 📊 **Result Management**
+- **Individual Results**: View your recent 3 exams or full result history
+- **Student Comparison**: Compare results across multiple students
+- **Latest Exams Analysis**: Compare the latest X exams between students
+- **Full History**: Access complete exam records with detailed statistics
 
-· Individual Results: View your recent 3 exams or full result history
-· Student Comparison: Compare results across multiple students
-· Latest Exams Analysis: Compare the latest X exams between students
-· Full History: Access complete exam records with detailed statistics
+### 🔍 **Student Database**
+- **Easy Student Addition**: Add students using roll number and mobile
+- **Auto-Discovery**: Search mode to find students by roll number range
+- **Multi-Mobile Support**: Automatic fallback to secondary mobile numbers
+- **Data Refresh**: Update student information from the official portal
 
-🔍 Student Database
+### 🎨 **Visual Interface**
+- **Color-coded Output**: Easy-to-read terminal interface with colors
+- **Formatted Tables**: Beautiful comparison tables with proper alignment
+- **Progress Indicators**: Real-time feedback during operations
+- **Professional UI**: Box-drawing characters for clean presentation
 
-· Easy Student Addition: Add students using roll number and mobile
-· Auto-Discovery: Search mode to find students by roll number range
-· Multi-Mobile Support: Automatic fallback to secondary mobile numbers
-· Data Refresh: Update student information from the official portal
+### 🔄 **Data Management**
+- **JSON Storage**: Structured data storage in JSON format
+- **Edit Capabilities**: Modify existing student information
+- **Bulk Operations**: Refresh all students or individual records
+- **Backup Friendly**: Easy to backup and restore student data
 
-🎨 Visual Interface
+## 📁 File Structure
 
-· Color-coded Output: Easy-to-read terminal interface with colors
-· Formatted Tables: Beautiful comparison tables with proper alignment
-· Progress Indicators: Real-time feedback during operations
-· Professional UI: Box-drawing characters for clean presentation
 
-🔄 Data Management
-
-· JSON Storage: Structured data storage in JSON format
-· Edit Capabilities: Modify existing student information
-· Bulk Operations: Refresh all students or individual records
-· Backup Friendly: Easy to backup and restore student data
-
-📁 File Structure
-
-```
 Retina/
-├── retina.sh              # Main controller script (Bash)
-├── retina_api.py          # API interaction with Retina portal
-├── retina_data.py         # Student data management
-├── retina_display.py      # Result display functions
-├── retina_compare.py      # Comparison utilities
-├── retina_refresh.py      # Data refresh functions
-├── retina_students.json   # Student database (auto-generated)
-└── .github/logo/
-    └── retina_logo.svg    # Retina coaching centre logo
+├──retina.sh              # Main controller script (Bash)
+├──retina_api.py          # API interaction with Retina portal
+├──retina_data.py         # Student data management
+├──retina_display.py      # Result display functions
+├──retina_compare.py      # Comparison utilities
+├──retina_refresh.py      # Data refresh functions
+├──retina_students.json   # Student database (auto-generated)
+└──.github/logo/
+└── retina_logo.svg    # Retina coaching centre logo
+
 ```
 
-🚀 Installation
+## 🚀 Installation
 
-Prerequisites
+### Prerequisites
+- **Termux** installed on your Android device
+- Active internet connection
+- Retina student credentials (roll number and registered mobile)
 
-· Termux installed on your Android device
-· Active internet connection
-· Retina student credentials (roll number and registered mobile)
+### Step-by-Step Setup
 
-Step-by-Step Setup
+1. **Install Termux** from F-Droid or Google Play Store
 
-1. Install Termux from F-Droid or Google Play Store
-2. Update Termux packages:
-
+2. **Update Termux packages:**
 ```bash
 pkg update && pkg upgrade
 ```
@@ -335,6 +331,6 @@ Made with ❤️ for Retina students
 
 Disclaimer: This tool is not officially affiliated with Retina Medical Coaching Centre. Use at your own discretion.
 
-⬆ Back to Top
+[⬆ Back to Top](#top)
 
 </div>
