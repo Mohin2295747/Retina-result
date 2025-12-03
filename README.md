@@ -56,7 +56,6 @@ Retina/
 └──.github/logo/
 └── retina_logo.svg    # Retina coaching centre logo
 
-```
 
 ## 🚀 Installation
 
@@ -83,8 +82,8 @@ pkg install python curl git
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Retina.git
-cd Retina
+git clone https://github.com/Mohin2295747/Retina-result.git
+cd Retina-result
 ```
 
 1. Make the main script executable:
