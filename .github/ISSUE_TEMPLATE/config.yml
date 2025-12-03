@@ -1,0 +1,18 @@
+# .github/ISSUE_TEMPLATE/config.yml
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Retina Documentation
+    url: https://github.com/yourusername/Retina#readme
+    about: Check the README for installation, usage, and troubleshooting
+  - name: ❓ Frequently Asked Questions
+    url: https://github.com/yourusername/Retina#-frequently-asked-questions
+    about: Find answers to common questions
+  - name: 🐛 Troubleshooting Guide
+    url: https://github.com/yourusername/Retina#-troubleshooting
+    about: Common issues and their solutions
+  - name: 💬 Discussions
+    url: https://github.com/yourusername/Retina/discussions
+    about: Ask questions and share ideas in Discussions
+  - name: 📊 Project Roadmap
+    url: https://github.com/yourusername/Retina/discussions/categories/roadmap
+    about: Check planned features and project direction

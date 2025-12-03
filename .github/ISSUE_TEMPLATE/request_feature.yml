@@ -1,3 +1,4 @@
+# .github/ISSUE_TEMPLATE/feature_request.yml
 name: ✨ Feature Request
 description: Suggest a new feature or improvement for Retina Result Fetcher
 title: "[Feature]: "
@@ -7,134 +8,174 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a new feature! Please describe your idea in detail below.
+        ## Before You Submit
+        - Please check if your feature request already exists in [Discussions](https://github.com/yourusername/Retina/discussions/categories/ideas)
+        - Consider if your idea is better suited as a [Discussion](https://github.com/yourusername/Retina/discussions/categories/ideas) first
+        - Feature requests should align with Retina's purpose as a **Termux-based result fetcher for medical students**
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Feature Title
+      description: A clear, concise title for your feature request
+      placeholder: "Add batch result download for all students"
+    validations:
+      required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: Problem or limitation
-      description: Is your feature request related to a problem? Please describe.
+      label: Problem Statement
+      description: What problem are you trying to solve? Who experiences this problem?
       placeholder: |
         Example:
-        "I'm always frustrated when I have to manually check each student's results one by one..."
-    validations:
-      required: true
+        "As a student who compares results with 10+ friends, I spend too much time manually fetching each person's results individually..."
+      validations:
+        required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: Proposed solution
-      description: Describe what you want to happen.
+      label: Proposed Solution
+      description: How should this feature work? Be as specific as possible.
       placeholder: |
         Example:
-        "It would be great if there was a batch processing mode that could fetch results for all students at once..."
-    validations:
-      required: true
-
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives considered
-      description: Describe any alternative solutions or features you've considered.
-      placeholder: |
-        Example:
-        "I thought about writing a custom script, but having it built-in would be more convenient for all users..."
+        "Add a 'Batch Fetch' option that can download results for all students in the database at once, saving them to individual JSON files..."
+      validations:
+        required: true
 
   - type: dropdown
-    id: feature-area
+    id: user-type
     attributes:
-      label: Which area does this feature relate to?
+      label: Who are you?
+      description: This helps us understand the use case better
+      options:
+        - "Retina Student (Primary User)"
+        - "Study Group Coordinator"
+        - "Tutor/Teacher"
+        - "Developer/Contributor"
+        - "Other"
+      validations:
+        required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: What area does this feature improve?
       multiple: true
       options:
-        - "User Interface/UX"
-        - "Result Display"
-        - "Comparison Features"
-        - "Student Management"
-        - "Data Export/Import"
-        - "Performance/Speed"
-        - "Authentication/Login"
-        - "Error Handling"
-        - "Mobile App Features"
-        - "Termux Integration"
-        - "Documentation"
+        - "📊 Result Display & Analysis"
+        - "🔍 Student Management"
+        - "📱 Termux/Android Experience"
+        - "🎨 User Interface"
+        - "⚡ Performance & Speed"
+        - "🔐 Security & Privacy"
+        - "📁 Data Import/Export"
+        - "🔄 Automation"
+        - "📈 Statistics & Analytics"
+        - "🔗 API & Integration"
+        - "📝 Documentation"
+        - "🧪 Testing & Quality"
         - "Other"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: How important is this feature to you?
-      options:
-        - "Critical - I need this to use the tool effectively"
-        - "High - This would significantly improve my workflow"
-        - "Medium - Nice to have, but not essential"
-        - "Low - Minor improvement, but still useful"
 
   - type: textarea
     id: use-case
     attributes:
-      label: Use case
-      description: |
-        How would you use this feature?
-        Who would benefit from it? (e.g., individual students, groups, tutors)
+      label: Detailed Use Case
+      description: Walk us through exactly how you would use this feature
       placeholder: |
-        Example:
-        "As a student, I would use this feature to quickly compare my progress with my study group..."
+        1. I would open retina.sh
+        2. Select the new "Batch Process" option from menu
+        3. Choose which students to include
+        4. System fetches all results automatically
+        5. Results are saved to /results folder
+        6. I can view aggregated statistics...
       validations:
         required: true
 
   - type: textarea
     id: mockups
     attributes:
-      label: Mockups or examples
+      label: Mockups or Examples
       description: |
-        If you have any mockups, screenshots, or examples of similar features in other software, please share them.
+        If you have any mockups, sketches, or examples from other software, please share.
         
-        **Tip:** You can attach files by dragging and dropping or clicking this area.
-
-  - type: textarea
-    id: technical-details
-    attributes:
-      label: Technical considerations (optional)
-      description: |
-        Any technical details, API considerations, or implementation thoughts?
-        
-        Are there any Retina API limitations to consider?
+        You can:
+        - Describe the interface/text flow
+        - Share screenshots (drag & drop)
+        - Link to similar features in other tools
       placeholder: |
-        Example:
-        "The Retina API currently doesn't provide this data, but we could calculate it from existing information..."
+        "The interface could look like:
+        ╔════════════════════════════════╗
+        ║      BATCH RESULT FETCH       ║
+        ╠════════════════════════════════╣
+        ║ [✓] John (911101)             ║
+        ║ [✓] Sarah (911102)            ║
+        ║ [ ] Alex (911103)             ║
+        ║                                ║
+        ║ [Fetch Selected] [Fetch All]  ║
+        ╚════════════════════════════════╝"
 
   - type: textarea
-    id: related-features
+    id: technical-notes
     attributes:
-      label: Related features
-      description: |
-        Does this feature relate to any existing features?
-        Would it replace or enhance any current functionality?
+      label: Technical Considerations (Optional)
+      description: Any technical details, limitations, or Retina API considerations?
       placeholder: |
-        Example:
-        "This would enhance the 'Compare Results' feature by adding statistical analysis..."
+        "Notes:
+        - Retina API has rate limiting (1 request/second?)
+        - Would need error handling for failed fetches
+        - Should include progress indicators
+        - Might need to handle authentication failures"
 
   - type: textarea
-    id: additional-context
+    id: alternatives
     attributes:
-      label: Additional context
-      description: Add any other context, screenshots, or examples about the feature request here.
+      label: Alternative Solutions (Optional)
+      description: Have you tried any workarounds or alternative approaches?
+      placeholder: |
+        "Current workaround:
+        - I wrote a Python script that loops through students.json
+        - But it doesn't handle errors well
+        - Would be better integrated into the main tool"
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues/Discussions
+      description: Link to any related GitHub issues or discussions
+      placeholder: |
+        "Related:
+        - Issue #45: 'Add export to CSV feature'
+        - Discussion: 'Batch operations for study groups'"
 
   - type: checkboxes
-    id: checklist
+    id: acknowledgements
     attributes:
-      label: Checklist
-      description: Please confirm the following
+      label: ✅ Acknowledgements
+      description: Please confirm you've read these points
       options:
-        - label: I have searched existing issues and verified this is not a duplicate
+        - label: I have searched existing issues and discussions
           required: true
-        - label: I have provided a clear, descriptive title
+        - label: This feature is not a duplicate
           required: true
-        - label: I have explained the problem and proposed solution in detail
+        - label: I understand this is an unofficial tool for Retina students
           required: true
-        - label: I understand this is an unofficial project and feature requests depend on volunteer availability
+        - label: I've provided clear, specific details about the feature
           required: true
-        - label: I'm willing to help test the feature if implemented
-        - label: I'm open to discussing implementation details or alternatives
+        - label: I'm willing to help test if this feature is implemented
+        - label: I can provide more details if needed
+        - label: I understand implementation depends on volunteer availability
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Next Steps
+        - This feature request will be reviewed by maintainers
+        - It may be moved to Discussions for broader feedback
+        - If accepted, it will be added to the project roadmap
+        - You'll be notified of any updates on this issue
+        
+        Thank you for improving Retina Result Fetcher! 🎯

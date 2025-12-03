@@ -299,6 +299,12 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 ```
+## 📝 Documentation & Support
+
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to the project
+- [Support Guide](SUPPORT.md) - How to get help
+- [Issue Templates](.github/ISSUE_TEMPLATE/) - Bug reports and feature requests
+- [Discussions](https://github.com/yourusername/Retina/discussions) - Community discussions
 
 📄 License
 
