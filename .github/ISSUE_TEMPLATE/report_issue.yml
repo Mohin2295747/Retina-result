@@ -1,0 +1,189 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with Retina Result Fetcher
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please fill out this form as completely as possible.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "Describe the issue..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this issue? Please be as specific as possible.
+      placeholder: |
+        1. Run './retina.sh'
+        2. Select option '2'
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: "The system should display my recent 3 exam results..."
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+      placeholder: "Instead, I get an 'Authentication failed' error..."
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error messages or logs
+      description: |
+        Copy and paste any error messages you see in the terminal.
+        
+        **Tip:** If the error is long, please upload it as a file instead of pasting it here.
+      render: shell
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Run `python3 --version` to check
+      placeholder: "Python 3.11.2"
+    validations:
+      required: true
+
+  - type: input
+    id: termux-version
+    attributes:
+      label: Termux version
+      description: Check in Termux settings or run `termux-info`
+      placeholder: "0.118.0"
+
+  - type: input
+    id: android-version
+    attributes:
+      label: Android version
+      description: Check in your device settings
+      placeholder: "Android 13"
+    validations:
+      required: true
+
+  - type: input
+    id: device-model
+    attributes:
+      label: Device model
+      description: Your phone/tablet model
+      placeholder: "Samsung Galaxy S23"
+
+  - type: dropdown
+    id: script-used
+    attributes:
+      label: Which script were you using?
+      options:
+        - "retina.sh (main script)"
+        - "retina_api.py"
+        - "retina_data.py"
+        - "retina_display.py"
+        - "retina_compare.py"
+        - "retina_refresh.py"
+        - "Multiple scripts"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: function-used
+    attributes:
+      label: Which function were you trying to use?
+      options:
+        - "Add New Student"
+        - "Your Result (Recent 3)"
+        - "Compare Results (All Exams)"
+        - "Compare Latest X Exams"
+        - "Other's Result"
+        - "Search Mode"
+        - "Full Result"
+        - "Edit Members"
+        - "Refresh Student Data"
+        - "Custom Python script"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: student-data
+    attributes:
+      label: Student data info (optional)
+      description: |
+        **Important:** Do NOT share real roll numbers or mobile numbers!
+        
+        You can share:
+        - How many students are in your database
+        - If you're using the default data file or a custom one
+        - General info about the affected student(s)
+      placeholder: |
+        Example:
+        - Using default retina_students.json
+        - 3 students in database
+        - Issue happens with all students
+
+  - type: textarea
+    id: network-info
+    attributes:
+      label: Network information (optional)
+      description: |
+        Is Retina portal accessible from your device?
+        Can you access https://api.result.retinabd.org in browser?
+        
+        **Note:** Please don't attempt login from browser if you're not comfortable.
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: |
+        If applicable, add screenshots or screen recordings to help explain your problem.
+        
+        **Tip:** You can attach files by dragging and dropping or clicking this area.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: |
+        Add any other context about the problem here.
+        
+        Have you tried any troubleshooting steps?
+        Does this happen every time or only sometimes?
+      placeholder: |
+        Example:
+        - I've tried reinstalling Termux
+        - The issue started after updating Python
+        - Only happens when comparing more than 5 students
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched the existing issues and this is a new issue
+          required: true
+        - label: I have provided all requested information
+          required: true
+        - label: I have not included any real personal information (roll numbers, mobile numbers, etc.)
+          required: true
+        - label: I have tried basic troubleshooting (restarting Termux, checking internet connection)
+          required: true
+        - label: I understand this is an unofficial tool and not affiliated with Retina Medical Coaching Centre
+          required: true  
