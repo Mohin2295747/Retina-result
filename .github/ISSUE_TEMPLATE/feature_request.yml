@@ -9,8 +9,8 @@ body:
     attributes:
       value: |
         ## Before You Submit
-        - Please check if your feature request already exists in [Discussions](https://github.com/yourusername/Retina/discussions/categories/ideas)
-        - Consider if your idea is better suited as a [Discussion](https://github.com/yourusername/Retina/discussions/categories/ideas) first
+        - Please check if your feature request already exists in Discussions
+        - Consider if your idea is better suited as a Discussion first
         - Feature requests should align with Retina's purpose as a **Termux-based result fetcher for medical students**
 
   - type: input
@@ -30,8 +30,8 @@ body:
       placeholder: |
         Example:
         "As a student who compares results with 10+ friends, I spend too much time manually fetching each person's results individually..."
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: textarea
     id: solution
@@ -41,8 +41,8 @@ body:
       placeholder: |
         Example:
         "Add a 'Batch Fetch' option that can download results for all students in the database at once, saving them to individual JSON files..."
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: dropdown
     id: user-type
@@ -55,8 +55,8 @@ body:
         - "Tutor/Teacher"
         - "Developer/Contributor"
         - "Other"
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: dropdown
     id: feature-category
@@ -86,13 +86,13 @@ body:
       description: Walk us through exactly how you would use this feature
       placeholder: |
         1. I would open retina.sh
-        2. Select the new "Batch Process" option from menu
+        2. Select the new "Batch Process" option from the menu
         3. Choose which students to include
         4. System fetches all results automatically
-        5. Results are saved to /results folder
+        5. Results are saved to the/results folder
         6. I can view aggregated statistics...
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: textarea
     id: mockups
